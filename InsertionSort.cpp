@@ -68,3 +68,22 @@ int main()
  return 0;
 }
 
+
+for(int i=0;i<n-1;i++)
+{
+  for(j=i+1;j<n-i;j++)
+  {
+     if(arr[i]>arr[j])
+        swap(arr[i],arr[j]);
+  }
+}
+
+for(int i=0;i<n-1;i++)
+{
+  int mini = arr[i];
+  for(int j=i+1;j<n;j++)
+        if(arr[j]<mini)
+                index = j;
+
+  swap(arr[i],arr[index]);
+}
